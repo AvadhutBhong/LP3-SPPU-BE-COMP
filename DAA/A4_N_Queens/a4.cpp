@@ -69,7 +69,7 @@ int main() {
         cin >> n;
 
         if (n <= 3) {
-            cout << "❌ No valid solutions for N <= 3.\n";
+            cout << "No valid solutions for N <= 3.\n";
             continue;
         }
 
@@ -80,7 +80,7 @@ int main() {
         cin >> fixedCol;
 
         if (fixedRow < 0 || fixedRow >= n || fixedCol < 0 || fixedCol >= n) {
-            cout << "❌ Invalid queen position.\n";
+            cout << "Invalid queen position.\n";
             continue;
         }
 
@@ -92,9 +92,9 @@ int main() {
         solveNQueens(0, n, board, solutions);
 
         if (solutions.empty()) {
-            cout << "\n❌ No solution exists with queen at (" << fixedRow << ", " << fixedCol << ")\n";
+            cout << "\nNo solution exists with queen at (" << fixedRow << ", " << fixedCol << ")\n";
         } else {
-            cout << "\n✅ Total Solutions Found: " << solutions.size() << "\n";
+            cout << "\nTotal Solutions Found: " << solutions.size() << "\n";
 
             for (int s = 0; s < solutions.size(); s++) {
                 cout << "\nSolution " << s + 1 << ":\n";
